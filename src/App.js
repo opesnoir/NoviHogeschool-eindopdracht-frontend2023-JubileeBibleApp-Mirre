@@ -8,25 +8,27 @@ import NotFound from "./pages/notFound/NotFound";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
+import Search from "./pages/search/Search";
 
 function App() {
-  const auth = false;
+    const auth = false;
 
-  return (
+    return (
 
-      <>
-        <Nav/>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/login-profile" element={auth === true ? <Profile/> : <Navigate to="/"/>}/>
-          <Route path="*" element={<NotFound/>}/>
-        </Routes>
-        <Footer/>
-      </>
-  );
+        <>
+            <Nav/>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/search" element={<Search/>}/>
+                <Route path="/register" element={<Register/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/login-profile" element={auth === true ? <Profile/> : <Navigate to="/"/>}/>
+                <Route path="*" element={<NotFound/>}/>
+            </Routes>
+            <Footer/>
+        </>
+    );
 }
 
 export default App;
