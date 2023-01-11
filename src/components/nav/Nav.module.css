@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-/*////////////////
-Table of contents
-1. Global styles;
-2. Areas;
- ///////////////*/
+/*Table of contents*/
+/*
+1.  styles
+2.  styles
+3.  styles
+4.  styles
+5.  styles
+*/
 
-.outer-container{
+/*1. Container styles */
+.outerContainer{
     width: 100%;
     display: block;
     box-sizing: border-box;

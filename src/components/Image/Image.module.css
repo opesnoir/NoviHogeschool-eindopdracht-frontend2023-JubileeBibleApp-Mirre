@@ -1,0 +1,9 @@
+.img{
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+}
