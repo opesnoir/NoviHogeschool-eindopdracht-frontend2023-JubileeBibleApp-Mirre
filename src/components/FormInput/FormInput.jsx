@@ -23,7 +23,7 @@ const FormInput = ({
                     {label}
                     {required}
                 </label>
-                <input
+                <input className={styles.inputtekst}
                     type={type}
                     id={id}
                     name={name}
