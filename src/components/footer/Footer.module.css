@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*Table of contents*/
+/*
+1. Container styles
+2. Footer styles
+3. Link styles
+4. Icon styles
+5. Copyright styles
+*/
+
+/*1. Container styles */
+.footer{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #062948;
+    margin: 10px 0 0 0;
+    padding: 25px 30px;
+    line-height: 10px;
+    font-size: 16px;
+    color: #f7f0f0;
+}
+
+/*2. Link styles*/
+.link{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #f7f0f0;
+    text-decoration: none;
+    margin: 16px 0;
+}
+
+/*3. Tekst styles*/
+.p{
+    margin: 16px 0;
+    font-weight: bolder;
+}
+
+/*4. Icon styles*/
+.icons{
+    padding-left: 60%;
+}
+
+/*5. Copyright styles*/
+.copyright{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 16px 0;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+}

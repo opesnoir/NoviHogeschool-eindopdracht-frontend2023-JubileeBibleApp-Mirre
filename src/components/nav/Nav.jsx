@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
 import logo from '../../assets/jubilee-bibleapp-high-resolution-logo-white-on-transparent-background copy.png'
 import {AiOutlineUser} from 'react-icons/ai';
