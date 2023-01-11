@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./FormInput.module.jsx.css"
+import styles from "./FormInput.module.css";
 
 const FormInput = ({
                       htmlFor,
@@ -18,7 +18,7 @@ const FormInput = ({
 
     return (
         <>
-            <div className={styles.container}>
+            <div className={styles.label}>
                 <label htmlFor={htmlFor}>
                     {label}
                     {required}
