@@ -1,0 +1,29 @@
+.form{
+    display: flex;
+    flex-direction: row;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+
+}
+.select{
+    width: 750px;
+    padding: 20px 40px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 2px solid;
+}
+.input{
+    width: 622px;
+    padding: 20px 40px;
+    font-size: 25px;
+    border-radius: 20px;
+}
+.button{
+    padding: 20px 20px;
+    font-size: 25px;
+    border-radius: 20px;
+}

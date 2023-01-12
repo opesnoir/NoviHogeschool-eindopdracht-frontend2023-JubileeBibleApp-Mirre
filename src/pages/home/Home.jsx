@@ -1,21 +1,86 @@
-import React, {useState} from 'react';
-import FormInput from "../../components/FormInput/FormInput";
+import React, {useEffect, useState} from 'react';
 import BasicIntro from "../../components/BasicIntro/BasicIntro";
-import {useForm} from "react-hook-form";
+import {Form, Link} from "react-router-dom";
+/*import styles from "../search/Search.module.css";*/
+import styles from './Home.module.css';
+import axios from "axios";
 
+// api key
+const API_KEY = process.env.REACT_APP_API_KEY
 
 const Home = () => {
+
+    const [bible, setBible] = useState();
+    const [data, setData] = useState([]);
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('Jesus');
+
+    //DUPLICAAT
+    useEffect(() => {
+        async function fetchData() {
+            setError(false)
+            try {
+                setLoading(true)
+                const response = await axios.get(`https://api.scripture.api.bible/v1/bibles`, {
+                    // header data and api key
+                    headers: {
+                        'api-key': API_KEY,
+                    },
+                    //add params here
+                    params: {}
+                })
+                console.log(response.data.data)
+                setData(response.data.data)
+            } catch (error) {
+                console.error(error)
+                setError(true)
+            } finally {
+                setLoading(false)
+            }
+        }
+
+        //invoke function
+        void fetchData()
+    }, [])
 
     return (
         <>
             <BasicIntro
                 title="Zoek een Bijbelvers"
-                introduction="Welkom op Jubilee BibleApp. Zoek hieronder een Bijbelvers op titel of steekwoord in ruim 40 vertalingen."
+                introduction="Welkom op Jubilee BibleApp. Zoek hieronder een Bijbelvers op titel of steekwoord in ruim 40 vertalingen. Selecteer een Bijbel, voer een zoekterm in en druk op de button om de resultaten te bekijken"
             >
-                {
-
-                }
-
+                {<form action="" className={styles.form}>
+                    <label htmlFor="" className={styles.labelOuter}>
+                        <label htmlFor="bible" className={styles.label}></label>
+                        <select
+                            className={styles.select}
+                            name="bible"
+                            id="bible"
+                            value={bible}
+                            onChange={(e) => setBible(e.target.value)}>
+                            {data.map((b) => (
+                                <option key={b.id} value={b.id}>
+                                    {b.name}
+                                </option>
+                            ))}
+                        </select>
+                        <label htmlFor="searchTerm" className={styles.label}></label>
+                        <input
+                            className={styles.input}
+                            type="text"
+                            name="searchTerm"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}/>
+                        <Link to="/search">
+                            <button
+                                className={styles.button}
+                                type="submit"
+                            >Zoeken
+                            </button>
+                        </Link>
+                    </label>
+                </form>}
             </BasicIntro>
 
 
