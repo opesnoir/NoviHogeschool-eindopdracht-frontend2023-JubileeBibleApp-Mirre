@@ -4,6 +4,7 @@ import {Form, Link} from "react-router-dom";
 /*import styles from "../search/Search.module.css";*/
 import styles from './Home.module.css';
 import axios from "axios";
+import TextBox from "../../components/TextBox/TextBox";
 
 // api key
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -82,27 +83,23 @@ const Home = () => {
                     </label>
                 </form>}
             </BasicIntro>
-
-
-            <section>
-                <article>
-
-
-                </article>
-            </section>
-            <hr/>
-            <section>
-                <article>
-                    <h2>Bijbeltekst van de dag</h2>
-                    <p>insert hier dynamisch de Bijbeltekst</p>
-                    <img src="" alt=""/>
-                </article>
-                <article>
-                    <h2>De Bijbel</h2>
-                    <p>Achtergrondinformatie</p>
-                    <img src="" alt=""/>
-                    <button>Lees Meer</button>
-                </article>
+            <section className={styles.section}>
+                  <div className={styles.box}>
+                <TextBox
+                    className={styles.whiteBox}
+                    title="Bijbeltekst van de dag"
+                    text="insert hier dynamisch de Bijbeltekst"
+                />
+                  </div>
+                <div className={styles.box}>
+                <TextBox
+                    className={styles.whiteBox}
+                    title="De Bijbel"
+                    text="Achtergrondinformatie"
+                >
+                {<button>Lees Meer</button>}
+                </TextBox>
+                    </div>
             </section>
             <hr/>
             <section>
