@@ -1,8 +1,9 @@
 import React from 'react';
-import styles from "../../pages/login/Login.module.css";
+/*import styles from "../../pages/login/Login.module.css";*/
+import styles from "./BasicIntro.module.css";
 import {Link} from "react-router-dom";
 
-const BasicIntro = ({children, text1, text2, text3, link, title}) => {
+const BasicIntro = ({children, text1, text2, text3, link, title, introduction}) => {
     return (
         <>
             <div className={styles.outerContainer}>
@@ -23,6 +24,7 @@ const BasicIntro = ({children, text1, text2, text3, link, title}) => {
                     </div>
                     <div className={styles.formOuterContainer}>
                         <div className={styles.formInnerContainer}>
+                            <p className={styles.introduction}>{introduction}</p>
                             {children}
                         </div>
                     </div>

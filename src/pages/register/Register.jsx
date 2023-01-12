@@ -43,7 +43,9 @@ const Register = () => {
                 text3="om in te loggen"
                 link="/login"
                 title="Registreer"
+                introduction="Wil je favorieten verzen opslaan? Registreer dan hieronder je persoonlijke Jubilee account."
             >
+
 
                 {<form onSubmit={handleSubmit}>
                     <FormInput

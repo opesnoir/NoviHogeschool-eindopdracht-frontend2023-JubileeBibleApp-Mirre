@@ -20,6 +20,7 @@ const Login = () => {
                 text3="om je te registreren"
                 link="/register"
                 title="Inloggen"
+                introduction="Heb je al een account en wil je favorieten verzen opslaan? Log dan hieronder in op je persoonlijke account."
             >
                 {<form action="">
                     <FormInput

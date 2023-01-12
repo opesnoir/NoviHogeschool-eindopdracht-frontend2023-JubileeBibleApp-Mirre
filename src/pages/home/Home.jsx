@@ -1,28 +1,28 @@
 import React, {useState} from 'react';
 import FormInput from "../../components/FormInput/FormInput";
-import styles from "../search/Search.module.css";
-import Button from "../../components/Button/Button";
+import BasicIntro from "../../components/BasicIntro/BasicIntro";
+import {useForm} from "react-hook-form";
+
 
 const Home = () => {
 
     return (
-        <div>
+        <>
+            <BasicIntro
+                title="Zoek een Bijbelvers"
+                introduction="Welkom op Jubilee BibleApp. Zoek hieronder een Bijbelvers op titel of steekwoord in ruim 40 vertalingen."
+            >
+                {
+
+                }
+
+            </BasicIntro>
+
+
             <section>
                 <article>
-                    <h1>Zoek een Bijbelvers</h1>
-                    <p>Welkom op Jubilee BibleApp. Zoek hieronder een Bijbelvers op titel of steekwoord in ruim 40 vertalingen.</p>
-                    <form action="">
-                        <label htmlFor="">
-                            <input type="text"/>
-                            <input type="text"/>
-                            <input
-                                type="text"
-                                id="searchTerm"
-                                placeholder="Zoek in de Bijbel"
-                            />
-                            <button type="button">Zoek</button>
-                        </label>
-                    </form>
+
+
                 </article>
             </section>
             <hr/>
@@ -85,7 +85,7 @@ const Home = () => {
 
 
 
-        </div>
+        </>
     );
 };
 
