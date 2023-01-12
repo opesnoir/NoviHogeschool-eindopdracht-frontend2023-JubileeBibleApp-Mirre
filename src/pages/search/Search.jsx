@@ -94,11 +94,11 @@ const Search = () => {
 
     return (
         <>
-            <div>
-                <div>
+            <div className={styles.outerContainer}>
+                <div className={styles.innerContainer}>
                     <div>
-                        <form onSubmit={handleSearch}>
-                            <label htmlFor="bible">Selecteer een Bijbel:</label>
+                        <form onSubmit={handleSearch} className={styles.formContainer}>
+                            <label htmlFor="bible" className={styles.label}>Selecteer een Bijbel:</label>
                             <select
                                 name="bible"
                                 id="bible"
@@ -110,7 +110,7 @@ const Search = () => {
                                     </option>
                                 ))}
                             </select>
-                            <label htmlFor="searchTerm">Voer een zoekterm in:</label>
+                            <label htmlFor="searchTerm" className={styles.label}>Voer een zoekterm in:</label>
                             <input
                                 type="text"
                                 name="searchTerm"
@@ -123,15 +123,16 @@ const Search = () => {
                         <hr/>
                         {loading && <span className={styles.loadingTekst}>Loading...</span>}
                         {totalResults > 0 && (
-                            <p className={styles.totalResults}> Totaal aantal resultaten: <span
-                                className={styles.resultsAantal}>{totalResults}</span></p>
+                            <p className={styles.results}>Totaal aantal resultaten: <span
+                                className={styles.resultsAmount}>{totalResults}</span></p>
                         )}
                         {currentPost.length > 0 && (
-                            <ul className={styles.u}>
+                            <ul className={styles.ul}>
                                 {currentPost.map((result) =>
-                                    <li key={result.id} className={`${styles.listItems} search-result-item`}>
-                                        <span className={styles.reference}>{result.reference}</span> <span
-                                        className={styles.text}>{result.text}</span></li>
+                                    <li key={result.id} className={`${styles.list} search-result-item`}>
+                                        <span className={styles.reference}>{result.reference}</span>
+                                        <span>{result.text}</span>
+                                    </li>
                                 )}
                             </ul>
                         )}

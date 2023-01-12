@@ -1,0 +1,87 @@
+.outerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #062948;
+}
+.innerContainer{
+    width: 80%;
+    padding: 20px 50px;
+    margin: 100px 120px 100px 120px;
+    min-height: 275px;
+    background-color: #f7f0f0;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    gap: 5px;
+    margin: 20px 30px ;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.label{
+    font-size: 18px;
+}
+select{
+    width: 350px;
+}
+
+hr{
+    margin: 40px 30px 20px 30px;
+    border: 2px solid #062948;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.errorTekst{
+    color: #860E0E;
+    font-size: 13px;
+    margin-left: 60px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
+}
+.loadingTekst{
+    color: #860E0E;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 50px;
+}
+
+.results{
+    padding-left: 30px;
+    padding-top: 20px ;
+    font-size: 16px;
+}
+.resultsAmount{
+    color: #623a1f;
+    font-weight: lighter;
+}
+
+.ul{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    color: #062948;
+    padding: 5px 5px;
+    margin: 5px 5px;
+}
+.reference{
+    color: #1c72a3;
+    font-weight: bolder;
+    padding-right: 12px;
+
+}
