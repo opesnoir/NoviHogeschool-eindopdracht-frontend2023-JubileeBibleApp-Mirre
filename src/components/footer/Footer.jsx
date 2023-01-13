@@ -12,7 +12,7 @@ const Footer = () => {
             <div className={styles.footer}>
                 <div>
                     <p className={styles.p}>Meer informatie:</p>
-                    <Link to="/about" className={styles.link} >Jubilee BibleApp</Link>
+                    <Link to="/about-jubilee" className={styles.link} >Jubilee BibleApp</Link>
                 </div>
                 <div className={styles.icons}>
                     <p>Bezoek: <FiFacebook/> <FiInstagram/> <FaTwitter/> <FaPinterest/>  </p>
