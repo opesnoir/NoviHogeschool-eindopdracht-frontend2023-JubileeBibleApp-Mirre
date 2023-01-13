@@ -31,15 +31,15 @@
 .box{
     background-image: url("../../assets/homepage-granaatappel-pexels-pixabay-65256 copy.jpg");
     background-size: cover;
-    width: 45%;
-    padding: 80px 50px;
+    width: 48%;
+    padding: 85px 70px;
     justify-content: space-between;
 }
 
 .whiteBox{
-    width: 600px;
+    width: 500px;
     height: 200px;
-    background-color: #f7f0f0;
+    background-color: #ECE3E7;
     display: flex;
     flex-direction: column;
     justify-content: center;

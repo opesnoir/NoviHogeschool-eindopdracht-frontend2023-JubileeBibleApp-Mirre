@@ -64,11 +64,12 @@ const Search = () => {
                 },
                 params: {
                     query: searchTerm,
+                    limit: 100,
                 },
             });
-            /*console.log(response.data.data);*/
+            console.log(response.data.data);
             setSearchResults(response.data.data.verses);
-            /*console.log(response.data.data.total)*/
+            console.log(response.data.data.total)
             setTotalResults(response.data.data.total)
         } catch (error) {
             console.error(error)
@@ -127,7 +128,7 @@ const Search = () => {
                                 className={styles.resultsAmount}>{totalResults}</span></p>
                         )}
                         {currentPost.length > 0 && (
-                            <ul className={styles.ul}>
+                            <ul className={styles["ul"]}>
                                 {currentPost.map((result) =>
                                     <li key={result.id} className={`${styles.list} search-result-item`}>
                                         <span className={styles.reference}>{result.reference}</span>

@@ -2,6 +2,8 @@ import React from 'react';
 import schaap from '../../assets/about-sheep-pexels-arthur-swiffen-12550240 copy.jpg'
 import Image from '../../components/Image/Image';
 import BasicSection from "../../components/BasicSection/BasicSection";
+import SearchFormInput from "../../components/SearchFormInput/SearchFormInput";
+import FormInput from "../../components/FormInput/FormInput";
 
 const About = () => {
     return (

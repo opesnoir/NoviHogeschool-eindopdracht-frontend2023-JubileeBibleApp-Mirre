@@ -5,6 +5,7 @@ import {Form, Link} from "react-router-dom";
 import styles from './Home.module.css';
 import axios from "axios";
 import TextBox from "../../components/TextBox/TextBox";
+import SearchFormInput from "../../components/SearchFormInput/SearchFormInput";
 
 // api key
 const API_KEY = process.env.REACT_APP_API_KEY
