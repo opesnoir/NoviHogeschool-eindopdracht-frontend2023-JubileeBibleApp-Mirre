@@ -9,6 +9,7 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Search from "./pages/search/Search";
+import AboutJubilee from "./pages/aboutJubilee/AboutJubilee";
 
 function App() {
     const auth = false;
@@ -20,6 +21,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
+                <Route path="/about-jubilee" element={<AboutJubilee/>}/>
                 <Route path="/search" element={<Search/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>

@@ -70,7 +70,7 @@ hr{
 }
 .list{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: auto;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
@@ -78,10 +78,10 @@ hr{
     color: #062948;
     padding: 5px 5px;
     margin: 5px 5px;
+    /*text-align: start;*/
 }
 .reference{
     color: #1c72a3;
     font-weight: bolder;
     padding-right: 12px;
-
 }
