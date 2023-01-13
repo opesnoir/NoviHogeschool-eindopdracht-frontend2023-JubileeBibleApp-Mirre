@@ -54,7 +54,7 @@ const Home = () => {
                 introduction="Welkom op Jubilee BibleApp. Zoek hieronder een Bijbelvers op titel of steekwoord in ruim 40 vertalingen. Selecteer een Bijbel, voer een zoekterm in en druk op de button om de resultaten te bekijken"
             >
                 {<form action="" className={styles.form}>
-                    <label htmlFor="" className={styles.labelOuter}>
+                    <label htmlFor="">
                         <label htmlFor="bible" className={styles.label}></label>
                         <select
                             className={styles.select}
@@ -103,8 +103,7 @@ const Home = () => {
                 </TextBox>
                     </div>
             </section>
-            <hr/>
-            <section className={styles.video}>
+            <section className={styles.videoContainer}>
                 <VideoBox
                     width="359"
                     height="206"

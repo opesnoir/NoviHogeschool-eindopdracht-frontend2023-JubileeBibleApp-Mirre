@@ -1,9 +1,21 @@
+.innerContainer{
+    background-color: #f7f0f0;
+    height: 400px;
+    margin: 130px 50px;
+    padding: 70px 20px 20px 20px;
+}
+.frame{
+    border: 2px solid #062948;
+    border-radius: 4px;
+}
+
 .youtube{
     color: #FF0000;
     font-family: Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
+    padding-top: 30px;
 }
 
 .videoTitle{
@@ -11,5 +23,4 @@
     font-weight: bolder;
     font-size: 18px;
     color: black;
-
 }
