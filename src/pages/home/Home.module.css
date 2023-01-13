@@ -57,3 +57,8 @@
     padding: 100px 10px ;
     align-content: space-between;
 }
+
+.video{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,15 @@
+.youtube{
+    color: #FF0000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.videoTitle{
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    color: black;
+
+}

@@ -6,6 +6,7 @@ import styles from './Home.module.css';
 import axios from "axios";
 import TextBox from "../../components/TextBox/TextBox";
 import SearchFormInput from "../../components/SearchFormInput/SearchFormInput";
+import VideoBox from "../../components/VideoBox/VideoBox";
 
 // api key
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -103,22 +104,28 @@ const Home = () => {
                     </div>
             </section>
             <hr/>
-            <section>
-                <article>
-                    <a href="">link naar youtubevideo1</a>
-                    <h4>Youtube</h4>
-                    <p>Videotitel</p>
-                </article>
-                <article>
-                    <a href="">link naar youtubevideo2</a>
-                    <h4>Youtube</h4>
-                    <p>Videotitel</p>
-                </article>
-                <article>
-                    <a href="">link naar youtubevideo3</a>
-                    <h4>Youtube</h4>
-                    <p>Videotitel</p>
-                </article>
+            <section className={styles.video}>
+                <VideoBox
+                    width="359"
+                    height="206"
+                    src="https://www.youtube.com/embed/XEjDiMjkVRo"
+                    title="What is the Bible"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                />
+                <VideoBox
+                    width="359"
+                    height="206"
+                    src="https://www.youtube.com/embed/7_CGP-12AE0"
+                    title="Story of the Bible"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                />
+                <VideoBox
+                    width="359"
+                    height="206"
+                    src="https://www.youtube.com/embed/takEeHtRrMw"
+                    title="The New Humanity"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                />
             </section>
             <hr/>
             <section>
