@@ -10,6 +10,7 @@ import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Search from "./pages/search/Search";
 import AboutJubilee from "./pages/aboutJubilee/AboutJubilee";
+import AboutBible from "./pages/AboutBible/AboutBible";
 
 function App() {
     const auth = false;
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/about-jubilee" element={<AboutJubilee/>}/>
+                <Route path="/about-Bijbel" element={<AboutBible/>}/>
                 <Route path="/search" element={<Search/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>

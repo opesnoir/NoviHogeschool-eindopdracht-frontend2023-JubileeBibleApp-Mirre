@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./BasicSection.module.css"
 
-const BasicSection = ({title, paragraph1, paragraph2, name, children}) => {
+const BasicSection = ({title, paragraph1, paragraph2,  name, children}) => {
     return (
             <section>
                 <article className={styles.outerContainer}>
@@ -12,8 +12,8 @@ const BasicSection = ({title, paragraph1, paragraph2, name, children}) => {
                         <div>
                             <p className={styles.p}>{paragraph1}</p>
                             <p className={styles.p}>{paragraph2}</p>
-                            <p className={styles.name}>{name}</p>
                             {children}
+                            <p className={styles.name}>{name}</p>
                         </div>
                     </div>
                 </article>
