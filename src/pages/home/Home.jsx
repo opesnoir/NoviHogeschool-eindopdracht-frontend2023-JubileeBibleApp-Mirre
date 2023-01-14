@@ -6,10 +6,10 @@ import styles from './Home.module.css';
 import axios from "axios";
 import TextBox from "../../components/TextBox/TextBox";
 import VideoBox from "../../components/VideoBox/VideoBox";
-import Tile from "../../components/Tiles/Tile";
-import Button from "../../components/Button/Button";
 import Bible from "../../assets/home-bible-pexels-johnmark-smith-272337.jpg";
 import sheeps from "../../assets/home-sheeps-pexels-pixabay-460956 copy.jpg";
+import Tiles from "../../components/Tiles/Tiles";
+
 
 // api key
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -129,37 +129,48 @@ const Home = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 />
             </section>
-            <div className={styles.outerContainerTile}>
-            <Tile
-                classNameS={styles.sectionTile}
-                className={styles.title}
+
+
+            <Tiles
                 title="Registratie"
-                classNameP={styles.register}
-                text="Registreer als je Bijbelverzen wil opslaan als favoriet."
+                text="Registreer je om favoriete Bijbelverzen op te kunnen slaan."
+                LinkTo="/register"
+                button="registreer"
+                type="button"
+                onClick="onClick"
+                src={Bible}
+                alt="Afbeelding van een Bijbel"
+                classNameButton={styles.buttonRegistreren}
+                classNameImg={styles.imgBible}
             >
-                <button type="button"> Registreer </button>
-            </Tile>
-            <Tile
-                img={Bible}
-                alt="Bijbel"
-            />
-            </div>
-            <div>
-            <Tile
-                img={sheeps}
-                alt="Schapen in een weiland"
-            />
-            <Tile
-                title="Aanmelden voor de nieuwbrief"
-                text="Op de hoogte blijven van ontwikkelingen en contact houden met Jubilee BibleApp? Meld je dan aan voor de nieuwsbrief."
-            >
-                <form action="">
-                    <label htmlFor="">aanmelden:</label>
-                    <input type="email"/>
-                    <button>Aanmelden</button>
-                </form>
-            </Tile>
-            </div>
+                <label htmlFor="">email</label>
+            </Tiles>
+
+
+            <section>
+                <article>
+                    <div className={styles.outerContainer}>
+                        <div className={styles.divImg}>
+                            <img src={sheeps} className={styles.imgSheep} alt="Afbeelding van twee schapen"/>
+                        </div>
+                        <div className={styles.div}>
+                            <h2 className={styles.h}>Aanmelden voor de nieuwsbrief</h2>
+                            <p className={styles.p}>Op de hoogte blijven van ontwikkelingen en contact houden met Jubilee BibleApp? Meld je dan aan voor de nieuwsbrief.</p>
+                            <button className={styles.classNameButton} type="button">Aanmelden</button>
+                        </div>
+
+                    </div>
+                </article>
+            </section>
+
+
+
+
+
+
+
+
+
 
             <hr/>
 

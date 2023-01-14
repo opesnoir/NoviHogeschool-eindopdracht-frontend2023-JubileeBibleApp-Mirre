@@ -32,7 +32,7 @@
     background-image: url("../../assets/homepage-granaatappel-pexels-pixabay-65256 copy.jpg");
     background-size: cover;
     width: 48%;
-    padding: 85px 70px;
+    padding: 85px 170px;
     justify-content: space-between;
     border-radius: 5px;
     border: 4px solid #062948;
@@ -67,33 +67,11 @@
     flex-direction: row;
     background-color: #062948;
     height: 657px;
+    justify-content: center;
 }
 
-.sectionTile{
-    width: 48%;
-}
 
-.title{
-    font-family: 'Inter', sans-serif;
-    font-size: 25px;
-    font-weight: lighter;
-    text-transform: uppercase;
-    color: #062948;
-    margin-top: 90px;
-}
-
-.register{
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #4F4F4F;
-    margin-top: 40px;
-    margin-bottom: 25px;
-}
-
-.outerContainerTile{
-    display: flex;
-    flex-direction: row;
-    margin: 30px 30px;
+.imgSheep{
+    margin-bottom: 40px;
 
 }
