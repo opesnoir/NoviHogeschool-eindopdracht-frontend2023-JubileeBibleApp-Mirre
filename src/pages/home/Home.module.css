@@ -72,6 +72,48 @@
 
 
 .imgSheep{
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    width: auto;
+}
+
+.buttonRegistreren{
+    background-color: #DD181C;
+    border: #860E0E;
+    color: #ECE3E7;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 20px 20px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.formAanmeldenLabel{
+    padding-top: 15px;
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.formAanmeldenInput{
+padding: 10px 120px;
+    margin-top: 30px;
+    font-size: 25px;
+    color: #062948;
+}
+
+.buttonAanmelden{
+    padding: 15px 20px;
+    margin-top: 30px;
+    background-color: #062948;
+    color: #ECE3E7;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.emailCheckbox{
+    margin-top: 30px;
+    font-size: 30px;
 
 }

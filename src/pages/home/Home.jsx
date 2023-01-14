@@ -9,6 +9,7 @@ import VideoBox from "../../components/VideoBox/VideoBox";
 import Bible from "../../assets/home-bible-pexels-johnmark-smith-272337.jpg";
 import sheeps from "../../assets/home-sheeps-pexels-pixabay-460956 copy.jpg";
 import Tiles from "../../components/Tiles/Tiles";
+import TilesMirror from "../../components/TilesMirror/TilesMirror";
 
 
 // api key
@@ -142,38 +143,31 @@ const Home = () => {
                 alt="Afbeelding van een Bijbel"
                 classNameButton={styles.buttonRegistreren}
                 classNameImg={styles.imgBible}
+            />
+
+            <TilesMirror
+                title="Aanmelden voor de nieuwsbrief"
+                text="Op de hoogte blijven van ontwikkelingen en contact houden met Jubilee BibleApp? Meld je dan aan voor de nieuwsbrief."
+                type="button"
+                onClick="onClick"
+                src={sheeps}
+                alt="Afbeelding van twee schapen"
+                classNameImg={styles.imgSheep}
             >
-                <label htmlFor="">email</label>
-            </Tiles>
-
-
-            <section>
-                <article>
-                    <div className={styles.outerContainer}>
-                        <div className={styles.divImg}>
-                            <img src={sheeps} className={styles.imgSheep} alt="Afbeelding van twee schapen"/>
-                        </div>
-                        <div className={styles.div}>
-                            <h2 className={styles.h}>Aanmelden voor de nieuwsbrief</h2>
-                            <p className={styles.p}>Op de hoogte blijven van ontwikkelingen en contact houden met Jubilee BibleApp? Meld je dan aan voor de nieuwsbrief.</p>
-                            <button className={styles.classNameButton} type="button">Aanmelden</button>
-                        </div>
-
-                    </div>
-                </article>
-            </section>
-
-
-
-
-
-
-
-
-
-
+                <form action="">
+                <label className={styles.formAanmeldenLabel} htmlFor="">Email:</label>
+                <input className={styles.formAanmeldenInput} type="text"/>
+                    <button className={styles.buttonAanmelden}>Aanmelden</button>
+                </form>
+                    <label>
+                        <input
+                            className={styles.emailCheckbox}
+                            type="checkbox"
+                        />
+                        Ik ga akkoord met het verzenden van mijn e-mailadres.
+                    </label>
+            </TilesMirror>
             <hr/>
-
         </>
     );
 };
