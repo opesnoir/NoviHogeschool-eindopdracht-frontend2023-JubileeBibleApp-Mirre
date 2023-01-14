@@ -102,7 +102,7 @@ const Home = () => {
                     title="De Bijbel"
                     text="Achtergrondinformatie"
                 >
-                {<button>Lees Meer</button>}
+                {<Link to="/about-Bijbel"><button type="button" className={styles.linkLeesOverBijbel}>Lees meer</button></Link>}
                 </TextBox>
                     </div>
             </section>
