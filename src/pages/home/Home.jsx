@@ -6,14 +6,8 @@ import styles from './Home.module.css';
 import axios from "axios";
 import TextBox from "../../components/TextBox/TextBox";
 import VideoBox from "../../components/VideoBox/VideoBox";
-import Bible from "../../assets/home-bible-pexels-johnmark-smith-272337.jpg";
-import sheeps from "../../assets/home-sheeps-pexels-pixabay-460956 copy.jpg";
-import Tiles from "../../components/Tiles/Tiles";
-import TilesMirror from "../../components/TilesMirror/TilesMirror";
 import DailyVerse from "../../components/DailyVerse/DailyVerse";
-import AboutBible from "../AboutBible/AboutBible";
-import Tile from "../../components/Tile/Tile";
-import Image from "../../components/Image/Image";
+
 
 
 // api key
@@ -141,114 +135,39 @@ const Home = () => {
 
             <article>
                 <div className={styles.tile}>
-                    <div className={styles.tileContainer}></div>
                         <div className={styles.tileContent}>
-                            <h2>Registreren</h2>
-                            <p>tekst input</p>
-                        </div>
-                </div>
-            </article>
-            <article>
-                <div className={styles.tile2}>
-                    <div className={styles.tileContent2}>
-                        <h2>Aanmelden</h2>
-                        <p>tekst input</p>
-                    </div>
-                    <div className={styles.tileContainer2}></div>
-                </div>
-            </article>
-
-
-
-
-
-         {/*   <section>
-                <div className={styles.inner}>
-                    <div>
-                        <Tile
-                            title="Registratie"
-                            text="Registreer je om favoriete Bijbelverzen op te kunnen slaan."
-                            LinkTo="/register"
-                            type="button"
-                            onClick="onClick"
-                            buttonName="Ga naar registreer"
-                        >
+                            <h2 className={styles.tileH} >Registreren</h2>
+                            <p className={styles.tileP}>Registreer je om favoriete Bijbelverzen op te kunnen slaan.</p>
                             <Link to="/register">
                                 <button className={styles.buttonRegistreren} type="button" onClick="onClick">Ga naar
                                     registreren
                                 </button>
                             </Link>
-                        </Tile>
-                        <Image
-                            src={Bible}
-                            alt="Afbeelding van een Bijbel"
-                        />
+                        </div>
+                    <div className={styles.tileContainer}></div>
+                </div>
+            </article>
+            <article>
+                <div className={styles.tile2}>
+                    <div className={styles.tileContainer2}></div>
+                    <div className={styles.tileContent2}>
+                        <h2 className={styles.tileH}>Aanmelden</h2>
+                        <p className={styles.tileP}>Op de hoogte blijven van ontwikkelingen? Meld je dan aan voor de nieuwsbrief.</p>
+                        <form action="">
+                            <label className={styles.formAanmeldenLabel} htmlFor="">Email:</label>
+                            <input className={styles.formAanmeldenInput} type="text"/>
+                            <button className={styles.buttonAanmelden}>Aanmelden</button>
+                        </form>
+                        <label>
+                            <input
+                                className={styles.emailCheckbox}
+                                type="checkbox"
+                            />
+                            Ik ga akkoord met het verzenden van mijn e-mailadres.
+                        </label>
                     </div>
                 </div>
-
-                <div className={styles.innerTile}>
-                    <div>
-                        <img className={styles.sheepsTile}
-                             src={sheeps}
-                             alt="Afbeelding van twee schapen"/>
-
-                        <Tile
-                            title="Aanmelden voor de nieuwsbrief"
-                            text="Op de hoogte blijven van ontwikkelingen? Meld je dan aan voor de nieuwsbrief."
-                        >
-                            <form action="">
-                                <label className={styles.formAanmeldenLabel} htmlFor="">Email:</label>
-                                <input className={styles.formAanmeldenInput} type="text"/>
-                                <button className={styles.buttonAanmelden}>Aanmelden</button>
-                            </form>
-                            <label>
-                                <input
-                                    className={styles.emailCheckbox}
-                                    type="checkbox"
-                                />
-                                Ik ga akkoord met het verzenden van mijn e-mailadres.
-                            </label>
-                        </Tile>
-                    </div>
-                </div>
-            </section>*/}
-
-            {/*            <Tiles
-                title="Registratie"
-                text="Registreer je om favoriete Bijbelverzen op te kunnen slaan."
-                LinkTo="/register"
-                button="registreer"
-                type="button"
-                onClick="onClick"
-                src={Bible}
-                alt="Afbeelding van een Bijbel"
-                classNameButton={styles.buttonRegistreren}
-                classNameImg={styles.imgBible}
-            />
-
-            <TilesMirror
-                title="Aanmelden voor de nieuwsbrief"
-                text="Op de hoogte blijven van ontwikkelingen en contact houden met Jubilee BibleApp? Meld je dan aan voor de nieuwsbrief."
-                type="button"
-                onClick="onClick"
-                src={sheeps}
-                alt="Afbeelding van twee schapen"
-                classNameImg={styles.imgSheep}
-            >
-                <form action="">
-                <label className={styles.formAanmeldenLabel} htmlFor="">Email:</label>
-                <input className={styles.formAanmeldenInput} type="text"/>
-                    <button className={styles.buttonAanmelden}>Aanmelden</button>
-                </form>
-                    <label>
-                        <input
-                            className={styles.emailCheckbox}
-                            type="checkbox"
-                        />
-                        Ik ga akkoord met het verzenden van mijn e-mailadres.
-                    </label>
-            </TilesMirror>*/}
-            <hr/>
+            </article>
         </>
     );
 };

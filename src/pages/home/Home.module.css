@@ -78,11 +78,7 @@
     width: auto;
 }
 
-/*.innerTile{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}*/
+
 
 .buttonRegistreren{
     background-color: #DD181C;
@@ -138,19 +134,18 @@ padding: 10px 120px;
 .tileContainer{
     width: 50%;
     height: 490px;
-    background-image: url("../../assets/home-sheeps-pexels-pixabay-460956 copy.jpg");
+    background-image: url("../../assets/home-bible-pexels-johnmark-smith-272337.jpg");
     background-size: cover;
 }
 
 .tileContent{
     width: 50%;
-    padding: 20px 40px;
+    padding: 50px 80px;
+    background-color: #f1f1f1;
 }
 
 .tile2{
     width: 100%;
-    /*    padding-top: 70px;
-        padding-bottom: 70px;*/
     display: flex;
     flex-direction: row;
 }
@@ -160,11 +155,30 @@ padding: 10px 120px;
     height: 490px;
     background-image: url("../../assets/home-sheeps-pexels-pixabay-460956 copy.jpg");
     background-size: cover;
-    margin-bottom: 40px;
+    margin-bottom: 105px;
 }
 
 .tileContent2{
     width: 50%;
-    padding: 20px 40px;
+    padding: 50px 80px;
+    background-color: #f1f1f1;
+}
+.tileH{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding-top: 50px;
+    color: #062948;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: lighter;
+}
+.tileP{
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    margin-top: 30px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #4F4F4F;
 }
 
