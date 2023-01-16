@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
-import styles from "./Search.module.css";
+import styles from "../search/Search.module.css";
 import Image from "../../components/Image/Image";
 import lamb from "../../assets/search-lamb-pexels-paul-seling-891607 copy.jpg";
 import Pagination from "../../components/Pagination/Pagination";
+import {AiOutlineHeart} from 'react-icons/ai';
 
 
 // api key
 const API_KEY = process.env.REACT_APP_API_KEY
 
-const Search = () => {
+const Favorite = () => {
 // state variables:
     // data - list of Bibles, dropdown menu
     // error - for error while fetching data (boolean)
@@ -24,6 +25,7 @@ const Search = () => {
     const [searchResults, setSearchResults] = useState([])
     const [bible, setBible] = useState('english-standard-version');
     const [totalResults, setTotalResults] = useState(0);
+    const [faves, setFaves] = useState([]);
 
 
     //async function to fetch a list of Bibles
@@ -80,6 +82,13 @@ const Search = () => {
         }
     };
 
+    //function for adding favorite
+    const addFave = (fave) => {
+        setFaves(prev => [...prev, fave])
+        /*console.log(fave);*/
+    }
+
+
     // Pagination
     // state variables for the pagination
     const [currentPage, setCurrentPage] = useState(1);
@@ -131,10 +140,13 @@ const Search = () => {
                         {currentPost.length > 0 && (
                             <ul className={styles.ul}>
                                 {currentPost.map((result) =>
+                                    <>
                                     <li key={result.id} className={`${styles.list} search-result-item`}>
                                         <span className={styles.reference}>{result.reference}</span>
                                         <span>{result.text}</span>
+                                        <button onClick={()=> addFave(result)} type="button"><AiOutlineHeart/></button>
                                     </li>
+                                    </>
                                 )}
                             </ul>
                         )}
@@ -155,4 +167,4 @@ const Search = () => {
     );
 };
 
-export default Search;
+export default Favorite;

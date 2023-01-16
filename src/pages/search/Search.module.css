@@ -71,6 +71,7 @@ hr{
 .list{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: auto;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
@@ -78,7 +79,7 @@ hr{
     color: #062948;
     padding: 5px 5px;
     margin: 5px 5px;
-    /*text-align: start;*/
+
 }
 
 .reference{

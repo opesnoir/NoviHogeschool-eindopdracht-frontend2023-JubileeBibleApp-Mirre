@@ -7,7 +7,7 @@ import About from "./pages/about/About";
 import NotFound from "./pages/notFound/NotFound";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
-import Profile from "./pages/profile/Profile";
+import Favorite from "./pages/favorite/Favorite";
 import Search from "./pages/search/Search";
 import AboutJubilee from "./pages/aboutJubilee/AboutJubilee";
 import AboutBible from "./pages/AboutBible/AboutBible";
@@ -27,7 +27,8 @@ function App() {
                 <Route path="/search" element={<Search/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>
-                <Route path="/login-profile" element={auth === true ? <Profile/> : <Navigate to="/"/>}/>
+                <Route path="/favorite" element={<Favorite/>}/>
+                <Route path="/login-favorite" element={auth === true ? <Favorite/> : <Navigate to="/search"/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
             <Footer/>
