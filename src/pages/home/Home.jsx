@@ -12,6 +12,7 @@ import Tiles from "../../components/Tiles/Tiles";
 import TilesMirror from "../../components/TilesMirror/TilesMirror";
 import DailyVerse from "../../components/DailyVerse/DailyVerse";
 import AboutBible from "../AboutBible/AboutBible";
+import Tile from "../../components/Tile/Tile";
 
 
 // api key
@@ -134,8 +135,48 @@ const Home = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 />
             </section>
+            <hr/>
 
-            <Tiles
+            <section>
+                <Tile
+                    title="Registratie"
+                    text="Registreer je om favoriete Bijbelverzen op te kunnen slaan."
+                    LinkTo="/register"
+                    type="button"
+                    onClick="onClick"
+                    buttonName="Ga naar registreer"
+                >
+                    {}
+            </Tile>
+                <Tile
+                    img={Bible}
+                    alt="Afbeelding van een Bijbel"
+                ></Tile>
+
+                <Tile
+                    img={sheeps}
+                    alt="Afbeelding van twee schapen"
+                >
+                    <form action="">
+                        <label className={styles.formAanmeldenLabel} htmlFor="">Email:</label>
+                        <input className={styles.formAanmeldenInput} type="text"/>
+                        <button className={styles.buttonAanmelden}>Aanmelden</button>
+                    </form>
+                    <label>
+                        <input
+                            className={styles.emailCheckbox}
+                            type="checkbox"
+                        />
+                        Ik ga akkoord met het verzenden van mijn e-mailadres.
+                    </label>
+                </Tile>
+                <Tile
+                    title="Aanmelden voor de nieuwsbrief"
+                    text="Op de hoogte blijven van ontwikkelingen en contact houden met Jubilee BibleApp? Meld je dan aan voor de nieuwsbrief."
+                ></Tile>
+            </section>
+
+{/*            <Tiles
                 title="Registratie"
                 text="Registreer je om favoriete Bijbelverzen op te kunnen slaan."
                 LinkTo="/register"
@@ -169,7 +210,7 @@ const Home = () => {
                         />
                         Ik ga akkoord met het verzenden van mijn e-mailadres.
                     </label>
-            </TilesMirror>
+            </TilesMirror>*/}
             <hr/>
         </>
     );
