@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-
+// see dailyverses.net for api documentation
 
 function DailyVerse() {
     useEffect(() => {

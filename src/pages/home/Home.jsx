@@ -11,6 +11,7 @@ import sheeps from "../../assets/home-sheeps-pexels-pixabay-460956 copy.jpg";
 import Tiles from "../../components/Tiles/Tiles";
 import TilesMirror from "../../components/TilesMirror/TilesMirror";
 import DailyVerse from "../../components/DailyVerse/DailyVerse";
+import AboutBible from "../AboutBible/AboutBible";
 
 
 // api key
@@ -92,12 +93,7 @@ const Home = () => {
             </BasicIntro>
             <section className={styles.section}>
                   <div className={styles.box}>
-               {/* <TextBox
-                    className={styles.whiteBox}
-                    title="Bijbeltekst van de dag"
-                    text="insert hier dynamisch de Bijbeltekst"
 
-                />*/}
                       <TextBox
                           className={styles.whiteBox}
                           title="Bijbeltekst van de dag"
@@ -107,12 +103,12 @@ const Home = () => {
                       </TextBox>
                   </div>
                 <div className={styles.box}>
-                <TextBox
-                    className={styles.whiteBox}
-                    title="De Bijbel"
-                    text="Achtergrondinformatie"
-                />
-
+                    <TextBox
+                        className={styles.whiteBox}
+                        title="De Bijbel"
+                        text="Achtergrondinformatie">
+                        {<Link to="/about-Bijbel"><button>Lees meer</button> </Link>}
+                    </TextBox>
                     </div>
             </section>
             <section className={styles.videoContainer}>
