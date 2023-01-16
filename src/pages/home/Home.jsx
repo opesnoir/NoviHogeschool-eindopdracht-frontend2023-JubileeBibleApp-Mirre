@@ -7,6 +7,7 @@ import axios from "axios";
 import TextBox from "../../components/TextBox/TextBox";
 import VideoBox from "../../components/VideoBox/VideoBox";
 import DailyVerse from "../../components/DailyVerse/DailyVerse";
+import pomegranate from "../../assets/homepage-granaatappel-pexels-pixabay-65256 copy.jpg"
 
 
 
@@ -87,16 +88,34 @@ const Home = () => {
                     </label>
                 </form>}
             </BasicIntro>
-            <section className={styles.section}>
-                <div className={styles.box}>
 
+            <div className={styles.imgPomegranateBeige}>
+                <div className={styles.thumbnail}>
+                    <img className={styles.imgPomegranate} src={pomegranate} alt="Afbeelding van een granaatappel"/>
+                    <div className={styles.caption}>
+                        <h2>Bijbeltekst van de dag</h2>
+                        <p><DailyVerse/></p>
+                    </div>
+                    <div className={styles.captionBox2}>
+                        <h2>De Bijbel</h2>
+                        <p>Achtergrondinformatie</p>
+                        <p>De Bijbel is een liefdesbrief van God aan jou. Het vertelt het verhaal van de schepping ...</p>
+                        <Link to="/about-Bijbel">
+                            <button>Lees meer</button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+
+          {/*  <section className={styles.section}>
+                <div className={styles.box}>
                     <TextBox
                         className={styles.whiteBox}
                         title="Bijbeltekst van de dag"
-                        text="insert hier dynamisch de Bijbeltekst"
-                    >
-                        {<DailyVerse/>}
-                    </TextBox>
+                        text={<DailyVerse/>}
+                    />
+
                 </div>
                 <div className={styles.box}>
                     <TextBox
@@ -108,7 +127,7 @@ const Home = () => {
                         </Link>}
                     </TextBox>
                 </div>
-            </section>
+            </section>*/}
             <section className={styles.videoContainer}>
                 <VideoBox
                     width="359"

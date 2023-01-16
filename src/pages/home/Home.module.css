@@ -9,6 +9,7 @@
     padding: 10px 10px;
 
 }
+
 .select{
     width: 750px;
     padding: 20px 40px;
@@ -22,6 +23,7 @@
     font-size: 25px;
     border-radius: 20px;
 }
+
 .button{
     padding: 20px 20px;
     font-size: 25px;
@@ -72,14 +74,12 @@
     justify-content: center;
 }
 
-
 .imgSheep{
     margin-bottom: 35px;
     width: auto;
 }
 
-
-
+/*tiles-elementen styling*/
 .buttonRegistreren{
     background-color: #DD181C;
     border: #860E0E;
@@ -121,12 +121,9 @@ padding: 10px 120px;
     font-size: 30px;
 }
 
-
-/*tiles laatste keer*/
+/*tiles styling*/
 .tile{
     width: 100%;
-/*    padding-top: 70px;
-    padding-bottom: 70px;*/
     display: flex;
     flex-direction: row;
 }
@@ -182,3 +179,48 @@ padding: 10px 120px;
     color: #4F4F4F;
 }
 
+/*styling granaatappel */
+
+.imgPomegranateBeige{
+    background-color: #EBE3E1;
+}
+.imgPomegranate{
+    display: block;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-radius: 60px;
+    margin: 2px 1px;
+}
+
+.thumbnail{
+    position: relative;
+    margin-bottom: 0;
+
+}
+
+.caption{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 60px;
+    margin-left: 120px;
+    top: 20%;
+    bottom: 20%;
+    left: 0;
+    width: 40%;
+    background-color: #ECE3E7;
+}
+
+.captionBox2{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 60px;
+    margin-left: 120px;
+    top: 20%;
+    bottom: 20%;
+    left: 50%;
+    width: 40%;
+    background-color: #ECE3E7;
+}
