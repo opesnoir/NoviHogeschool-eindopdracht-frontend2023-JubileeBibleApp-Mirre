@@ -61,7 +61,9 @@
     padding: 100px 10px ;
     align-content: space-between;
 }
-
+.sheepsTile{
+    width: 50%;
+}
 .videoContainer{
     display: flex;
     flex-direction: row;
@@ -76,14 +78,20 @@
     width: auto;
 }
 
+/*.innerTile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}*/
+
 .buttonRegistreren{
     background-color: #DD181C;
     border: #860E0E;
     color: #ECE3E7;
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 20px;
     padding: 20px 20px;
-    border-radius: 2px;
+    border-radius: 15px;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -115,5 +123,48 @@ padding: 10px 120px;
 .emailCheckbox{
     margin-top: 30px;
     font-size: 30px;
-
 }
+
+
+/*tiles laatste keer*/
+.tile{
+    width: 100%;
+/*    padding-top: 70px;
+    padding-bottom: 70px;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.tileContainer{
+    width: 50%;
+    height: 490px;
+    background-image: url("../../assets/home-sheeps-pexels-pixabay-460956 copy.jpg");
+    background-size: cover;
+}
+
+.tileContent{
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.tile2{
+    width: 100%;
+    /*    padding-top: 70px;
+        padding-bottom: 70px;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.tileContainer2{
+    width: 50%;
+    height: 490px;
+    background-image: url("../../assets/home-sheeps-pexels-pixabay-460956 copy.jpg");
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+.tileContent2{
+    width: 50%;
+    padding: 20px 40px;
+}
+
