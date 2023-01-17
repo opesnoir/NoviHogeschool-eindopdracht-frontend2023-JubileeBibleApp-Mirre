@@ -29,8 +29,6 @@ function App() {
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/favorite" element={<Favorite/>}/>
-                {/*tijdelijke route profile, om de profile pagina te bouwen en testen*/}
-                <Route path="profile" element={<Profile/>}/>
                 <Route path="/login-favorite" element={auth === true ? <Favorite/> : <Navigate to="/search"/>}/>
                 <Route path="/login-profile" element={auth === true ? <Profile/> : <Navigate to="/register"/>}/>
                 <Route path="*" element={<NotFound/>}/>

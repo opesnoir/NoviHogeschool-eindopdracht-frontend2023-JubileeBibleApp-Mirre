@@ -1,5 +1,8 @@
 import React from 'react';
 import {AiOutlineUser} from 'react-icons/ai';
+import styles from "./ProfileInput.module.css";
+import Button from "../Button/Button";
+import {Link} from "react-router-dom";
 
 
 const ProfileInput = ({gebruikersnaam, profielEmail }) => {
@@ -8,11 +11,13 @@ const ProfileInput = ({gebruikersnaam, profielEmail }) => {
             <div>
                 <div>
                     <div>
-                        <h1>Profielpagina</h1>
-                        <AiOutlineUser/>
-                        <p>Naam:{gebruikersnaam}</p>
-                        <p>Email:{profielEmail}</p>
-                        <button>Account verwijderen</button>
+                        <h1 className={styles.title}> <AiOutlineUser/> Profielpagina</h1>
+                        <p className={styles.text}>Naam:{gebruikersnaam}</p>
+                        <p className={styles.text}>Email:{profielEmail}</p>
+                        <p className={styles.text}>Naar favorieten:{<Link to="/login-favorite" className={styles.link}> Klik hier</Link>}</p>
+                        <Button
+                            name="Account verwijderen"
+                        />
                     </div>
                 </div>
             </div>

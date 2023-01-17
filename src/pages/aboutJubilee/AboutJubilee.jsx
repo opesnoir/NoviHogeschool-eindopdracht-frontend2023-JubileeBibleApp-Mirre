@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './AboutJubilee.module.css';
 import BasicSection from "../../components/BasicSection/BasicSection";
-import ram2 from "../../assets/aboutjubilee-ram-pexels-david-selbert-7465130.jpg";
+import ram2 from "../../assets/profile2-aboutjubilee-ram-pexels-david-selbert-7465130.jpg";
 import Image from "../../components/Image/Image";
 
 const AboutJubilee = () => {
