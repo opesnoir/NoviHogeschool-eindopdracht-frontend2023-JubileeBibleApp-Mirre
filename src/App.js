@@ -11,6 +11,7 @@ import Favorite from "./pages/favorite/Favorite";
 import Search from "./pages/search/Search";
 import AboutJubilee from "./pages/aboutJubilee/AboutJubilee";
 import AboutBible from "./pages/AboutBible/AboutBible";
+import Profile from "./pages/profile/Profile";
 
 function App() {
     const auth = false;
@@ -28,7 +29,10 @@ function App() {
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/favorite" element={<Favorite/>}/>
+                {/*tijdelijke route profile, om de profile pagina te bouwen en testen*/}
+                <Route path="profile" element={<Profile/>}/>
                 <Route path="/login-favorite" element={auth === true ? <Favorite/> : <Navigate to="/search"/>}/>
+                <Route path="/login-profile" element={auth === true ? <Profile/> : <Navigate to="/register"/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
             <Footer/>

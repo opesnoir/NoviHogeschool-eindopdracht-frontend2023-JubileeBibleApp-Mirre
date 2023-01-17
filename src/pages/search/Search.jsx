@@ -33,6 +33,8 @@ const Search = () => {
             try {
                 setLoading(true)
                 const response = await axios.get(`https://api.scripture.api.bible/v1/bibles`, {
+                   //HIER NOG TOKEN INVOEREN, ZIE EDHUB H. 10.1
+
                     // header data and api key
                     headers: {
                         'api-key': API_KEY,
