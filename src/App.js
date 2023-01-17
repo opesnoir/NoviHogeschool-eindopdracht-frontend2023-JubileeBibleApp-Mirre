@@ -10,8 +10,9 @@ import Login from "./pages/login/Login";
 import Favorite from "./pages/favorite/Favorite";
 import Search from "./pages/search/Search";
 import AboutJubilee from "./pages/aboutJubilee/AboutJubilee";
-import AboutBible from "./pages/AboutBible/AboutBible";
+import AboutBible from "./pages/aboutBible/AboutBible";
 import Profile from "./pages/profile/Profile";
+import ReadBible from "./pages/readBible/ReadBible";
 
 function App() {
     const auth = false;
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/favorite" element={<Favorite/>}/>
+                <Route path="/read-Bible" element={<ReadBible/>}/>
                 <Route path="/login-favorite" element={auth === true ? <Favorite/> : <Navigate to="/search"/>}/>
                 <Route path="/login-profile" element={auth === true ? <Profile/> : <Navigate to="/register"/>}/>
                 <Route path="*" element={<NotFound/>}/>
