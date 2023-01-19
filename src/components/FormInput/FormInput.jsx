@@ -8,6 +8,7 @@ const FormInput = ({
                       type,
                       id,
                       name,
+                      value,
                       role,
                       event,
                       placeholder,
@@ -27,6 +28,7 @@ const FormInput = ({
                     type={type}
                     id={id}
                     name={name}
+                    value={value}
                     role={role}
                     onChange={event}
                     placeholder={placeholder}

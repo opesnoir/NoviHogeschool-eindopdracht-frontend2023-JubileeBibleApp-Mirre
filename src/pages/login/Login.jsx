@@ -7,17 +7,33 @@ import Image from "../../components/Image/Image";
 import lamb from "../../assets/login-lamb-pexels-atahan-demir-11553491 copy.jpg"
 import BasicIntro from "../../components/BasicIntro/BasicIntro";
 import {AuthContext} from "../../context/AuthContext";
+import axios from "axios";
 
 const Login = () => {
     const {login} = useContext(AuthContext);
 
     const {register, formState: {errors}} = useForm();
     const [showPassword, setShowPassword] = useState(false);
+    const [email, setEmail] = useState(" ")
+    const [password, setPassword] = useState(" ")
 
-    function handleSubmit(e){
+    async function handleLogin(e) {
+        e.preventDefault()
+        try {
+            const response = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin',{
+                "username": "user",
+                "password" : "123456",
+            })
+            login( response.data.accessToken )
+        } catch ( e ) {
+            console.error( e )
+        }
+    }
+
+/*    function handleSubmit(e){
         e.preventDefault();
         login();
-    }
+    }*/
 
     return (
         <>
@@ -29,14 +45,15 @@ const Login = () => {
                 title="Inloggen"
                 introduction="Heb je al een account en wil je favorieten verzen opslaan? Log dan hieronder in op je persoonlijke account."
             >
-                {<form onSubmit={handleSubmit}>
+                {<form onSubmit={handleLogin}>
                     <FormInput
                         id="email"
                         name="email"
                         type="email"
                         role="user"
-                        onChange=" "
+                        onChange={ e => setEmail( e.target.value ) }
                         placeholder="Email:"
+                        value = {email}
                         register={register}
                         errors={errors}
                         validationSchema={{
@@ -53,7 +70,8 @@ const Login = () => {
                         name="password"
                         type={showPassword ? "text" : "password"}
                         role="user"
-                        onChange=" "
+                        value={password}
+                        onChange={ e => setPassword( e.target.value ) }
                         placeholder="Wachtwoord:"
                         register={register}
                         errors={errors}
