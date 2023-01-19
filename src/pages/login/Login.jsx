@@ -102,7 +102,7 @@ const Login = () => {
                     </label>
                     <div>
                         <Button
-                            type="button"
+                            type="submit"
                             name="Inloggen"
                         />
                     </div>

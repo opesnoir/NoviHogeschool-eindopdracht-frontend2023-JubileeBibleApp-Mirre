@@ -10,6 +10,9 @@ const Nav = () => {
     const {isAuth, logout} = useContext(AuthContext);
     const navigate = useNavigate();
 
+    function handleLogout() {
+        logout()
+    }
     const navLink = ({isActive}) => isActive
         ? 'active-link'
         : 'default-link'
@@ -28,12 +31,13 @@ const Nav = () => {
                         {isAuth &&
                             <>
                                 <li><NavLink to="/login-profile" className={navLink}>Profielpagina</NavLink></li>
-                                <li><button type="button" onClick={logout}>Uitloggen</button></li>
+                                <li><button type="button" onClick={handleLogout}>Uitloggen</button></li>
                             </>
                         }
 
                       {/*  {isAuth ?
-                            <button type="button" onClick={logout}>
+                            <button type="button" onClick={handleLogout
+                            }>
                                 Log uit
                             </button>
                             :

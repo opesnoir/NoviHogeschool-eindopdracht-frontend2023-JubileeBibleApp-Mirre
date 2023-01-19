@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import BasicIntro from "../../components/BasicIntro/BasicIntro";
-import {Form, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 /*import styles from "../search/Search.module.css";*/
 import styles from './Home.module.css';
 import axios from "axios";
-import TextBox from "../../components/TextBox/TextBox";
+/*import TextBox from "../../components/TextBox/TextBox";*/
 import VideoBox from "../../components/VideoBox/VideoBox";
 import DailyVerse from "../../components/DailyVerse/DailyVerse";
 import pomegranate from "../../assets/homepage-granaatappel-pexels-pixabay-65256 copy.jpg"

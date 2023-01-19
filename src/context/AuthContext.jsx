@@ -1,5 +1,5 @@
 // import createContext and useState.
-import React, { createContext, useState, useEffect } from 'react';
+import React, {createContext, useState, useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
@@ -10,7 +10,7 @@ import axios from "axios";
 export const AuthContext = createContext({});
 
 //custom provider component (add the children as property)
-function AuthContextProvider({ children }) {
+function AuthContextProvider({children}) {
 
     // state
     /*const [isAuth, toggleIsAuth] = useState(false);*/
@@ -22,51 +22,53 @@ function AuthContextProvider({ children }) {
 
     const navigate = useNavigate();
 
-    useEffect( () => {
-        // haal de JWT op uit Local Storage
-        const storedToken = localStorage.getItem( 'token' )
+    useEffect(() => {
+        // get token from local storage
+        const storedToken = localStorage.getItem('token')
 
+        // if token = true get userdata
+        if (storedToken) {
+            const decodedToken = jwt_decode(storedToken)
 
-        // if token get userdata
-        if ( storedToken ) {
-            const decodedToken = jwt_decode( storedToken )
-
-            if ( Math.floor( Date.now() / 1000 ) < decodedToken.exp ) {
-                console.log( "De gebruiker is NOG STEEDS ingelogd 🔓" )
-                void fetchUserData( storedToken, decodedToken.sub )
-            } else  {
-                console.log( "De token is verlopen" )
-                localStorage.removeItem( 'token' )
+            if (Math.floor(Date.now() / 1000) < decodedToken.exp) {
+                console.log("gebruiker nog ingelogd")
+                void fetchUserData(storedToken, decodedToken.sub)
+            } else {
+                console.log("token verlopen")
+                localStorage.removeItem('token')
             }
         } else {
             // no token
-            setAuth( {
+            setAuth({
                 ...auth,
                 isAuth: false,
                 user: null,
                 status: "done"
-            } )
+            })
         }
-    }, [] )
+    }, [])
 
     // login function
-    function login( jwt ) {
-        console.log( "Gebruiker ingelogd" )
-        localStorage.setItem( 'token', jwt )
-        const decodedToken = jwt_decode( jwt );
+    function login(jwt) {
+        console.log("gebruiker ingelogd")
+        localStorage.setItem('token', jwt)
+        const decodedToken = jwt_decode(jwt);
 
-        void fetchUserData( jwt, decodedToken.sub, "/profile" )
+        void fetchUserData(jwt, decodedToken.sub, "/profile")
     }
 
-    async function fetchUserData( jwt, id, redirect ) {
+    async function fetchUserData(jwt, id, redirect) {
         try {
-            const response = await axios.get( `http://localhost:3000/600/users/${ id }`, {
+            //test: const response = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/test/all`)
+            // console.log(response);
+            const response = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user/${id}`, {
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${ jwt }`,
+                    Authorization: `Bearer ${jwt}`,
                 }
-            } )
-            setAuth( {
+            })
+            console.log(response);
+            setAuth({
                 ...auth,
                 isAuth: true,
                 user: {
@@ -75,31 +77,31 @@ function AuthContextProvider({ children }) {
                     username: response.data.username
                 },
                 status: "done"
-            } )
-            if ( redirect ) {
-                navigate( redirect )
+            })
+            if (redirect) {
+                navigate(redirect)
             }
-            console.log( response )
-        } catch ( e ) {
-            console.error( e )
-            setAuth( {
+            console.log(response)
+        } catch (e) {
+            console.error(e)
+            setAuth({
                 ...auth,
                 status: "done"
-            } )
+            })
         }
     }
 
     // logout function
     function logout() {
-        console.log( "De gebruiker is uitgelogd" )
-        localStorage.removeItem( 'token' )
-        setAuth( {
+        console.log("gebruiker uitgelogd")
+        localStorage.removeItem('token')
+        setAuth({
             ...auth,
             isAuth: false,
             user: null,
             status: "done"
-        } )
-        navigate( "/login" )
+        })
+        navigate("/login")
     }
 
     // data-object (add to the AuthContext.Provider component as value).
@@ -114,7 +116,7 @@ function AuthContextProvider({ children }) {
 
     return (
         <AuthContext.Provider value={contextData}>
-            { auth.status === "done" ? children : <p>Loading...</p> }
+            {auth.status === "done" ? children : <p>Loading...</p>}
         </AuthContext.Provider>
     );
 }
