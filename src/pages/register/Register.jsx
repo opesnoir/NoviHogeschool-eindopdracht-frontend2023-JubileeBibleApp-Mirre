@@ -27,6 +27,7 @@ const Register = () => {
     // form submission call
     function handleSubmit(event) {
         event.preventDefault()
+        // void registerUser()
     }
 
 /*    //send Post request (JSON methode)
@@ -47,6 +48,7 @@ const Register = () => {
                 username: username,
                 password: password,
             })
+            console.log(response);
             login( response.data.accessToken )
         } catch ( e ) {
             console.error( e )
@@ -65,64 +67,76 @@ const Register = () => {
             >
 
 
-                {<form onSubmit={handleSubmit}>
-                    <FormInput
-                        id="name"
-                        name="name"
-                        type="text"
-                        role="user"
-                        value={username}
-                        onChange={event => setUsername(event.target.value)}
-                        placeholder="Naam:"
-                        register={register}
-                        errors={errors}
-                        validationSchema={{
-                            required: "Naam is vereist"
-                        }}
-                        required
-                    />
+                {<form onSubmit={registerUser}>
+                    <label>
+                        Email:
+                        <input type="email" value={ email } onChange={ event => setEmail( event.target.value ) }/>
+                    </label>
+                    <label>
+                        Username:
+                        <input type="username" value={ username } onChange={ event => setUsername( event.target.value ) }/>
+                    </label>
+                    <label>
+                        Password:
+                        <input type="password" value={ password }  onChange={ event => setPassword( event.target.value ) }/>
+                    </label>
+                    {/*<FormInput*/}
+                    {/*    id="name"*/}
+                    {/*    name="name"*/}
+                    {/*    type="text"*/}
+                    {/*    role="user"*/}
+                    {/*    value={username}*/}
+                    {/*    onChange={event => setUsername(event.target.value)}*/}
+                    {/*    placeholder="Naam:"*/}
+                    {/*    register={register}*/}
+                    {/*    errors={errors}*/}
+                    {/*    validationSchema={{*/}
+                    {/*        required: "Naam is vereist"*/}
+                    {/*    }}*/}
+                    {/*    required*/}
+                    {/*/>*/}
 
-                    <FormInput
-                        id="email"
-                        name="email"
-                        type="email"
-                        role="user"
-                        value={email}
-                        onChange={event => setEmail(event.target.value)}
-                        placeholder="Email:"
-                        register={register}
-                        errors={errors}
-                        validationSchema={{
-                            required: "Email is vereist", pattern: {
-                                value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                message: "Geldig emailadres is vereist"
-                            }
-                        }}
-                        required
-                    />
+                    {/*<FormInput*/}
+                    {/*    id="email"*/}
+                    {/*    name="email"*/}
+                    {/*    type="email"*/}
+                    {/*    role="user"*/}
+                    {/*    value={email}*/}
+                    {/*    onChange={event => setEmail(event.target.value)}*/}
+                    {/*    placeholder="Email:"*/}
+                    {/*    register={register}*/}
+                    {/*    errors={errors}*/}
+                    {/*    validationSchema={{*/}
+                    {/*        required: "Email is vereist", pattern: {*/}
+                    {/*            value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,*/}
+                    {/*            message: "Geldig emailadres is vereist"*/}
+                    {/*        }*/}
+                    {/*    }}*/}
+                    {/*    required*/}
+                    {/*/>*/}
 
-                    <FormInput
-                        id="password"
-                        name="password"
-                        type={showPassword ? "text" : "password"}
-                        role="user"
-                        value={password}
-                        onChange={event => setPassword(event.target.value)}
-                        placeholder="Wachtwoord:"
-                        register={register}
-                        errors={errors}
-                        validationSchema={{
-                            required: {
-                                value: true, message: "Wachtwoord is vereist"
-                            }, pattern: {
-                                value: /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-                                message: "Het wachtwoord bevat minimaal 8 tekens, waarvan 1 hoofdletter, 1 getal en 1 leesteken"
-                            }, minLength: {
-                                value: 8, message: "Voer minimaal 8 tekens in"
-                            }
-                        }}
-                        required
-                    />
+                    {/*<FormInput*/}
+                    {/*    id="password"*/}
+                    {/*    name="password"*/}
+                    {/*    type={showPassword ? "text" : "password"}*/}
+                    {/*    role="user"*/}
+                    {/*    value={password}*/}
+                    {/*    onChange={event => setPassword(event.target.value)}*/}
+                    {/*    placeholder="Wachtwoord:"*/}
+                    {/*    register={register}*/}
+                    {/*    errors={errors}*/}
+                    {/*    validationSchema={{*/}
+                    {/*        required: {*/}
+                    {/*            value: true, message: "Wachtwoord is vereist"*/}
+                    {/*        }, pattern: {*/}
+                    {/*            value: /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,*/}
+                    {/*            message: "Het wachtwoord bevat minimaal 8 tekens, waarvan 1 hoofdletter, 1 getal en 1 leesteken"*/}
+                    {/*        }, minLength: {*/}
+                    {/*            value: 8, message: "Voer minimaal 8 tekens in"*/}
+                    {/*        }*/}
+                    {/*    }}*/}
+                    {/*    required*/}
+                    {/*/>*/}
 
                     <label>
                         <input
@@ -134,21 +148,21 @@ const Register = () => {
                         Wachtwoord tonen
                     </label>
 
-                    <FormInput
-                        id="confirmpassword"
-                        name="confirmpassword"
-                        type={showConfirmPassword ? "text" : "password"}
-                        role="user"
-                        placeholder="Bevestig het wachtwoord:"
-                        register={register}
-                        errors={errors}
-                        validationSchema={{
-                            required: {
-                                value: true, message: "Bevestiging is vereist"
-                            }, validate: value => value === password.current,
-                        }}
-                        required
-                    />
+                    {/*<FormInput*/}
+                    {/*    id="confirmpassword"*/}
+                    {/*    name="confirmpassword"*/}
+                    {/*    type={showConfirmPassword ? "text" : "password"}*/}
+                    {/*    role="user"*/}
+                    {/*    placeholder="Bevestig het wachtwoord:"*/}
+                    {/*    register={register}*/}
+                    {/*    errors={errors}*/}
+                    {/*    validationSchema={{*/}
+                    {/*        required: {*/}
+                    {/*            value: true, message: "Bevestiging is vereist"*/}
+                    {/*        }, validate: value => value === password.current,*/}
+                    {/*    }}*/}
+                    {/*    required*/}
+                    {/*/>*/}
 
                     <label>
                         <input
@@ -162,7 +176,7 @@ const Register = () => {
 
                     <div>
                         <Button
-                            type="button"
+                            type="submit"
                             name="Inloggen"
                         />
                     </div>
