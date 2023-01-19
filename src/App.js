@@ -27,12 +27,12 @@ function App() {
                 <Route path="/about-jubilee" element={<AboutJubilee/>}/>
                 <Route path="/about-Bijbel" element={<AboutBible/>}/>
                 <Route path="/search" element={<Search/>}/>
-                <Route path="/register" element={<Register/>}/>
-                <Route path="/login" element={<Login/>}/>
+                <Route path="/signup" element={<Register/>}/>
+                <Route path="/signin" element={<Login/>}/>
                 <Route path="/favorite" element={<Favorite/>}/>
                 <Route path="/achtergrond-Bijbelboeken" element={<BackgroundBible/>}/>
-                <Route path="/login-favorite" element={auth === true ? <Favorite/> : <Navigate to="/search"/>}/>
-                <Route path="/login-profile" element={auth === true ? <Profile/> : <Navigate to="/register"/>}/>
+                <Route path="/favorite" element={auth === true ? <Favorite/> : <Navigate to="/search"/>}/>
+                <Route path="/profile" element={auth === true ? <Profile/> : <Navigate to="/register"/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
             <Footer/>

@@ -1,21 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
 import logo from '../../assets/jubilee-bibleapp-high-resolution-logo-white-on-transparent-background copy.png'
 import {AiOutlineUser} from 'react-icons/ai';
 import {AiOutlineUserAdd} from 'react-icons/ai';
 import styles from './Nav.module.css';
+import {AuthContext} from "../../context/AuthContext";
 
-const Nav = ({auth, toggleAuth}) => {
+const Nav = () => {
+    const {isAuth, logout} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const navLink = ({isActive}) => isActive
         ? 'active-link'
         : 'default-link'
-    const navigate = useNavigate();
 
-    function signOut() {
-        toggleAuth(false);
-        navigate('/')
-    }
 
     return (
         <>
@@ -27,10 +25,10 @@ const Nav = ({auth, toggleAuth}) => {
                         <img src={logo} alt="Jubilee BibleApp logo" className={styles.logo}/>
                         <li><NavLink to="/register" className={navLink}><AiOutlineUserAdd/>Registreer</NavLink></li>
                         <li><NavLink to="/login" className={navLink}><AiOutlineUser/>Login</NavLink></li>
-                        {auth &&
+                        {isAuth &&
                             <>
                                 <li><NavLink to="/login-profile" className={navLink}>Profielpagina</NavLink></li>
-                                <li><button type="button" onClick={signOut}>Uitloggen</button></li>
+                                <li><button type="button" onClick={logout}>Uitloggen</button></li>
                             </>
                         }
                     </ul>

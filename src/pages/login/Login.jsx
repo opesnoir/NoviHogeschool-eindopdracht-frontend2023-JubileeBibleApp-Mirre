@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import Button from "../../components/Button/Button";
 import FormInput from "../../components/FormInput/FormInput";
 import {useForm} from "react-hook-form";
@@ -6,11 +6,18 @@ import styles from "./Login.module.css"
 import Image from "../../components/Image/Image";
 import lamb from "../../assets/login-lamb-pexels-atahan-demir-11553491 copy.jpg"
 import BasicIntro from "../../components/BasicIntro/BasicIntro";
+import {AuthContext} from "../../context/AuthContext";
 
 const Login = () => {
+    const {login} = useContext(AuthContext);
 
     const {register, formState: {errors}} = useForm();
     const [showPassword, setShowPassword] = useState(false);
+
+    function handleSubmit(e){
+        e.preventDefault();
+        login();
+    }
 
     return (
         <>
@@ -22,7 +29,7 @@ const Login = () => {
                 title="Inloggen"
                 introduction="Heb je al een account en wil je favorieten verzen opslaan? Log dan hieronder in op je persoonlijke account."
             >
-                {<form action="">
+                {<form onSubmit={handleSubmit}>
                     <FormInput
                         id="email"
                         name="email"
