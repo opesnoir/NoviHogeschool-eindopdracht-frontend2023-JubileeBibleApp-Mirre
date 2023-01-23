@@ -1,0 +1,19 @@
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 800px;
+
+}
+
+.inputtekst {
+    font-size: 20px;
+    padding: 13px;
+    margin: 14px;
+}
+
+.errorsTekst {
+    font-size: 13px;
+    color: #860E0E;
+    margin-left: 20px;
+}

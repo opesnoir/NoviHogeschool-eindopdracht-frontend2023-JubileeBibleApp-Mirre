@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/*Table of contents*/
+/*
+1.  styles
+2.  styles
+3.  styles
+4.  styles
+5.  styles
+*/
+
+/*1. Container styles */
+.outerContainer{
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin:  auto;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+li, .navLink{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    list-style-type: none;
+    text-decoration: none solid #062948;
+    word-spacing: 1px;
+    padding: 5px 5px;
+    align-items: center;
+}
+
+.logo{
+    width: 220px;
+    height: 140px;
+    max-height: 100%;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #1D3D54;
+}
+
+nav a:hover{
+    color: #623a1f;
+    font-weight: normal;
+}
+
+nav a:focus{
+    color: #623a1f;
+    font-weight: bold;
+}

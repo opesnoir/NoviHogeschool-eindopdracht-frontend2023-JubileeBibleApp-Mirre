@@ -1,0 +1,29 @@
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 10px;
+    margin: 70px 20px 90px 20px;
+    color: #002855;
+    font-size: 45px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px 10px;
+    margin: 20px 135px;
+    color: #002855;
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    line-height: 50px;
+}
+.link{
+    text-decoration: none;
+    color: #1c72a3;
+    margin-left: 60px;
+}
